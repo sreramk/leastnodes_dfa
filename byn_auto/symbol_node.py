@@ -29,8 +29,8 @@ class SymbolNode:
 
         if node_nature is None:
             self.__node_nature = SymbolNode.NodeNature.NON_TERMINAL
-
-        self.__node_nature = node_nature
+        else:
+            self.__node_nature = node_nature
 
     def __str__(self):
 
@@ -55,7 +55,7 @@ class SymbolNode:
             edges.append((cur_node_id, conn_node_id))
             edge_labels[(cur_node_id, conn_node_id)] = str(symbol_set)
 
-        return edges, edge_labels
+        return edges, edge_labels, self.get_node_nature()
 
     def get_node_nature(self):
         return self.__node_nature
