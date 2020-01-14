@@ -144,10 +144,8 @@ class Graph:
         return edges, edge_labels
 
     def plot_graph(self, edge_color='black', node_color='pink', font_color='red'):
-        # edges = [['A', 'B'], ['B', 'C'], ['B', 'D']]
         edges, edge_labels = self.__get_all_edge_and_edgelabels()
         G = nx.DiGraph()
-        # print (edges)
         for i in range(1, len(edges)+1):
             G.add_edges_from([edges[i-1]], weight = 10*i)
         pos = nx.spring_layout(G, k=0.5, iterations=50)
@@ -155,40 +153,10 @@ class Graph:
         nx.draw(G, pos, edge_color=edge_color, width=1, linewidths=1,
                 node_size=500, node_color=node_color, alpha=0.9,
                 labels={node: node for node in G.nodes()})
-        # nx.draw_networkx_edge_labels(G, pos, edge_labels={('A', 'B'): 'AB',
-        #                                                   ('B', 'C'): 'BC', ('B', 'D'): 'BD'}, font_color='red')
+        
         nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_color=font_color)
-        # nx.draw_networkx_labels(G, pos, edge_labels=edge_labels, font_color=font_color)
-        # nx.draw_networkx_edges(G, pos, edgelist=edges, edge_color=edge_color, arrows=True)
+        
         plt.axis('off')
-
-        # G = nx.DiGraph()
-        # G.add_edges_from(
-        #     [('A', 'B'), ('A', 'C'), ('D', 'B'), ('E', 'C'), ('E', 'F'),
-        #      ('B', 'H'), ('B', 'G'), ('B', 'F'), ('C', 'G')])
-        #
-        # # val_map = {'A': 1.0,
-        # #            'D': 0.5714285714285714,
-        # #            'H': 0.0}
-        #
-        # # values = [val_map.get(node, 0.25) for node in G.nodes()]
-        #
-        # # Specify the edges you want here
-        # red_edges = [('A', 'C'), ('E', 'C')]
-        # edge_colours = ['black' if not edge in red_edges else 'red'
-        #                 for edge in G.edges()]
-        # black_edges = [edge for edge in G.edges() if edge not in red_edges]
-        #
-        # # Need to create a layout when doing
-        # # separate calls to draw nodes and edges
-        # pos = nx.spring_layout(G)
-        #
-        # plt.figure()
-        # nx.draw_networkx_nodes(G, pos, cmap=plt.get_cmap('jet'), node_size=500)
-        # nx.draw_networkx_labels(G, pos)
-        # nx.draw_networkx_edges(G, pos, edgelist=red_edges, edge_color='r', arrows=True)
-        # nx.draw_networkx_edges(G, pos, edgelist=black_edges, arrows=False)
-        # plt.axis('off')
 
     def __get_root_node(self):
         return self.__root_node
