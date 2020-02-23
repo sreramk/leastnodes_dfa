@@ -10,25 +10,25 @@ if __name__ == "__main__":
     gc.add_sequence([0,1,0])
     gc.add_sequence([0,1,1])
 
-    # gc.add_sequence([1, 0, 0])
-    # gc.add_sequence([1, 0, 1])
-    # gc.add_sequence([1, 1, 0])
-    # gc.add_sequence([1, 1, 1])
-    #
-    # gc.add_sequence([1, 0, 1, 1, 0, 1, 1])
-    # gc.add_sequence([1, 0, 1, 1, 0, 1, 0])
-    # gc.add_sequence([0, 0, 1, 1, 0, 1, 0])
-    # gc.add_sequence([0, 0, 1, 1, 0, 1, 1])
-    # gc.add_sequence([0, 0, 1, 1, 0, 1, 1])
-    # gc.add_sequence([1, 0, 0, 0, 0, 1, 1])
-    #
-    # gc.add_sequence([1, 0, 0, 0, 0, 1])
-    # gc.add_sequence([1, 0, 0, 0, 0])
-    # gc.add_sequence([1, 0, 0, 0])
-    # gc.add_sequence([1, 0, 0])
-    #
-    # gc.add_sequence([2,3,3,2,1])
-    # gc.add_sequence([2,3,2,1,1])
+    gc.add_sequence([1, 0, 0])
+    gc.add_sequence([1, 0, 1])
+    gc.add_sequence([1, 1, 0])
+    gc.add_sequence([1, 1, 1])
+    
+    gc.add_sequence([1, 0, 1, 1, 0, 1, 1])
+    gc.add_sequence([1, 0, 1, 1, 0, 1, 0])
+    gc.add_sequence([0, 0, 1, 1, 0, 1, 0])
+    gc.add_sequence([0, 0, 1, 1, 0, 1, 1])
+    gc.add_sequence([0, 0, 1, 1, 0, 1, 1])
+    gc.add_sequence([1, 0, 0, 0, 0, 1, 1])
+
+    gc.add_sequence([1, 0, 0, 0, 0, 1])
+    gc.add_sequence([1, 0, 0, 0, 0])
+    gc.add_sequence([1, 0, 0, 0])
+    gc.add_sequence([1, 0, 0])
+
+    gc.add_sequence([2,3,3,2,1])
+    gc.add_sequence([2,3,2,1,1])
 
 
     print(" Before simplification: \n")
